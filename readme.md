@@ -234,44 +234,9 @@ _You can now deploy your application using the pipeline._
       6. Click: Add webhook
 6. Pipeline 
    - Replace the declarative script with your actual pipeline script.
-```groovy
-pipeline {
-    agent { label 'production-agent' }
 
-    stages {
-        stage('Code') {
-            steps {
-                echo 'Pulling code from GitHub'
-                git branch: 'master', url: 'https://github.com/iam-avinash-jagtap/2-Tier-Application.git'
-                echo 'Code Clone Successful.'
-            }
-        }
+[Pipeline-Script](https://github.com/iam-avinash-jagtap/Automated-2-Tier-Application-Deployment-Using-Jenkins-and-Docker/blob/master/Flaskapp-Script.groovy)
 
-        stage('Build') {
-            steps {
-                echo 'Building the Docker image...'
-                sh 'docker build -t flaskapp:latest .'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing the application...'
-                // Add test commands here if needed
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application on Docker...'
-                sh 'docker-compose down'
-                sh 'docker-compose up -d'
-            }
-        }
-    }
-}
-
-```
 7. Save and Build
    - Click: “Save”
    - Then Click: “Build Now”
@@ -298,7 +263,10 @@ _Your pipeline will automatically trigger the build._
 ### The automation of your setup is successful.
 
 ## Note:-
-Using Docker commands, you can:
+- Open the production server and check:
+- The workspace directory — your project files will be there.
+ 
+- Using Docker commands, you can:
 
 1. Check running containers.
 
