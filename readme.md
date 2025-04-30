@@ -1,4 +1,4 @@
-# 2-Tier Application Deployment using Jenkins 
+# Automated 2-Tier Flask Application Deployment Using Jenkins and Docker
 Hello, in this project you are going to deploy a 2-tier application using a automated Jenkins CI/CD pipeline with Docker. The pipeline is fully automated, it pulls the source code from GitHub, builds Docker images for the frontend and backend, and deploys them using Docker Compose. Jenkins orchestrates the entire process, ensuring seamless integration and delivery. Docker is used for containerization, while Docker Compose handles multi-container deployment. This setup ensures consistent, repeatable, and hands-free deployments to the production environment.
 
 ## Pre-requisites
