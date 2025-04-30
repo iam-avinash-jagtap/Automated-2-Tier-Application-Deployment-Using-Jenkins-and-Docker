@@ -232,6 +232,9 @@ _You can now deploy your application using the pipeline._
       4. Content type: application/json
       5. Trigger: Just the push event
       6. Click: Add webhook
+
+![Webhook](https://github.com/iam-avinash-jagtap/Automated-2-Tier-Application-Deployment-Using-Jenkins-and-Docker/blob/master/Images/GitHub%20Webhook.png)
+
 6. Pipeline 
    - Replace the declarative script with your actual pipeline script.
 
@@ -242,13 +245,17 @@ _You can now deploy your application using the pipeline._
    - Then Click: “Build Now”
    - Check Console Output
 8. Stage View
-    
+
+![Pipeline](https://github.com/iam-avinash-jagtap/Automated-2-Tier-Application-Deployment-Using-Jenkins-and-Docker/blob/master/Images/Pipeline.png)
+
     _Use the Pipeline Stage View plugin to display your pipeline logs in detail._
 # Step 4:- Test Your Applicaton 
 _The deployment was successful on the production server. You can check it now._
 1. Copy: IP of Production Server 
 2. Paste: in browser 
    - http://<Production-server-IP>:5000
+
+ ![Output](https://github.com/iam-avinash-jagtap/Automated-2-Tier-Application-Deployment-Using-Jenkins-and-Docker/blob/master/Images/Output.png) 
 
 ### Your Application is Up and Running
 # Step 5:- Test Your Automation 
@@ -275,6 +282,8 @@ _Your pipeline will automatically trigger the build._
 3. Access the MySQL container.
 
 4. Cross-check database entries inside the MySQL container.
+
+![Containers](https://github.com/iam-avinash-jagtap/Automated-2-Tier-Application-Deployment-Using-Jenkins-and-Docker/blob/master/Images/Running%20Containers.png)
 
 # Summary 
 This project showcases the end-to-end CI/CD automation of a 2-tier Flask-based web application using Jenkins and Docker. The application source code is hosted on GitHub and is automatically pulled into Jenkins upon any push event using GitHub webhooks. The Jenkins pipeline is configured declaratively to run on a dedicated production agent node hosted on a separate EC2 instance. It includes stages for cloning the repository, building a Docker image of the Flask app, testing the application, and deploying it using Docker Compose. The entire infrastructure is hosted on AWS, with one EC2 (t2.medium) instance acting as the Jenkins manager and another (t2.micro) as the production server. Secure SSH key-based communication is established between Jenkins and the agent node. Docker ensures containerized deployment, making the environment portable and consistent. This automated setup reduces manual deployment efforts and ensures quicker, reliable application delivery. Overall, the project reflects a solid foundation in DevOps practices, cloud infrastructure, and pipeline-based deployment automation.
