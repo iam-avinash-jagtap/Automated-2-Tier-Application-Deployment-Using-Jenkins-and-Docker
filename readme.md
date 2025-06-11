@@ -99,7 +99,7 @@ _nstall the necessary packages and configurations on both servers for project ex
     docker --version 
 
     #Install Git:
-    Sudo yum install git -y 
+    sudo yum install git -y 
 
     #Verify Git Version:
     git --version 
@@ -134,7 +134,7 @@ _nstall the necessary packages and configurations on both servers for project ex
     sudo systemctl enable docker
 
     #Start Docker:
-    sudo systemctl start dockre
+    sudo systemctl start docker
 
     #Install Docker Compose:
     sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
