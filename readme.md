@@ -102,7 +102,16 @@ _nstall the necessary packages and configurations on both servers for project ex
     sudo yum install git -y 
 
     #Verify Git Version:
-    git --version 
+    git --version
+
+    #Assign Docker permission to the current user
+    sudo usermod -aG docker $USER && newgrp docker
+    sudo usermod -aG docker jenkins
+
+    # Restart Docker and Jenkins
+    sudo systemctl restart docker
+    sudo systemctl restart jenkins
+
 
     #Get Jenkins Initial Admin Password:
     sudo cat /var/lib/jenkins/secrets/initialAdminPassword
